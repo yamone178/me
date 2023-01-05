@@ -41,9 +41,9 @@ const App = () => {
    <div className={dark}>
      <div className="dark:bg-dark-bg">
       <div className='w-[80%] mx-auto '>
-          <div className="circle circle1 blob"></div>
+          {/* <div className="circle circle1 blob"></div> */}
               {/* <div className="circle circle2"></div> */}
-              <div className="circle circle3 blob"></div>
+              <div className="circle circle3 blob !w-full"></div>
         <NavBar changeDark={changeDark} dark={dark} />
 
         <HeroSection />

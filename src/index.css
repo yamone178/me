@@ -14,7 +14,7 @@ ul a:active{
 }
 
 .circle{
-    width: 600px;
+    width: 800px;
     height: 400px;
    
     z-index: 1000;
@@ -38,7 +38,7 @@ ul a:active{
 }
 .circle3{
     position: fixed;
-    bottom: -300px;
+    bottom: -330px;
     /* bottom: 50px; */
     /* right: 30%; */
     /* background-color: #67B3E4; */
