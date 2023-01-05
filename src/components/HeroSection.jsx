@@ -20,8 +20,9 @@ const HeroSection = () => {
 
 <div className="col-span-6 ">
     <div className=" flex justify-end">
-     <img src={pf} alt="" className='h-[450px] w-[450px] object-cover rounded-[50%]'/>
+     {/* <img src={pf} alt="" className='h-[450px] w-[450px] object-cover rounded-[50%]'/> */}
 
+        <div className="blob bg-img"></div>
     </div>
 </div>
 
