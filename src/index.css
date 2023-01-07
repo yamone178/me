@@ -30,6 +30,8 @@ ul a:active{
     left: 200px;
     /* top: 50px;
     left: 50px; */
+    
+
 }
 .circle2{
     top: 50px;
@@ -38,12 +40,12 @@ ul a:active{
 }
 .circle3{
     position: fixed;
-    bottom: -330px;
+    bottom: -390px;
     /* bottom: 50px; */
     /* right: 30%; */
     /* background-color: #67B3E4; */
-    background-image: linear-gradient(to left top, #c29d2e, #90ae49, #5bb877, #14bca7, #00bbcd, #2db8da, #52b4e2, #72afe5, #7bace5, #84a9e4, #8ca6e2, #95a3e0);    /* background-color: #c292dea9;  */
-
+    /* background-image: linear-gradient(to left top, #c29d2e, #90ae49, #5bb877, #14bca7, #00bbcd, #2db8da, #52b4e2, #72afe5, #7bace5, #84a9e4, #8ca6e2, #95a3e0);    background-color: #c292dea9;  */
+    background-image: linear-gradient(to right top, #d16ba5bc, #d55fae8d, #d753b896, #d748c4a1, #d33cd3, #cc3dda, #c33ee1, #ba40e8, #b049e7, #a650e5, #9c56e3b3, #955be0);
 }
 
 @keyframes morph {
