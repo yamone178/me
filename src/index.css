@@ -5,6 +5,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
 
 
+@layer components{
+    .btn-shadow{
+        @apply shadow-[inset_5px_5px_5px_rgb(0_0_0_/_5%),_inset_-5px_-5px_5px_rgb(255_255_255_/_50%),_5px_5px_5px_rgb(0_0_0_/_5%),_-5px_-5px_5px_rgb(255_255_255_/_50%)];
+    }
+}
+
 *{
    font-family:  'Montserrat', sans-serif;
 }

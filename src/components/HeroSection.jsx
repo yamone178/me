@@ -17,9 +17,9 @@ const HeroSection = () => {
     
     </div>
 
-    <a className="dark:text-white border-2 border-pink-600  p-3 mt-4 flex w-[230px] justify-around items-center rounded-md hover:bg-pink-700 duration-150 hover:text-white group">
-     <span>  MORE ABOUT ME </span>
-      <span className='bg-pink-600 rounded-full w-[30px] h-[30px] flex items-center font-bold group-hover:bg-white  '><AiOutlineArrowDown className='m-auto text-white group-hover:text-black' /></span>
+    <a className="dark:text-white border-2 dark:hover:text-black font-semibold   p-3 mt-4 flex w-[230px] justify-around items-center rounded-md hover:bg-[#ea8cd3] btn-shadow  duration-150 hover:text-white group">
+     <span>More About Me</span>
+      {/* <span className='bg-pink-600 rounded-full w-[30px] h-[30px] flex items-center font-bold group-hover:bg-white  '><AiOutlineArrowDown className='m-auto text-white group-hover:text-black' /></span> */}
     </a>
   </div>
 
