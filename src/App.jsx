@@ -2,6 +2,7 @@ import React from 'react'
 import HeroSection from './components/HeroSection'
 import NavBar from './components/NavBar'
 import { useState, useEffect } from 'react'
+import AboutMe from './components/AboutMe'
 
 const App = () => {
 
@@ -39,14 +40,17 @@ const App = () => {
 
   return (
    <div className={dark}>
-     <div className="dark:bg-dark-bg">
-      <div className='w-[80%] mx-auto '>
+     <div className="dark:bg-dark-bg relative">
+     <NavBar changeDark={changeDark} dark={dark} />
+
+      <div className='w-[80%] mx-auto pt-3 sticky top-0'>
           {/* <div className="circle circle1 blob"></div> */}
               {/* <div className="circle circle2"></div> */}
               <div className="circle circle3 blob !w-full"></div>
-        <NavBar changeDark={changeDark} dark={dark} />
 
         <HeroSection />
+
+        <AboutMe />
 
         <div className="h-screen"></div>
       </div>

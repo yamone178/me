@@ -6,6 +6,11 @@ module.exports = {
     'node_modules/flowbite-react/**/*.{js,jsx}' 
    ],
   theme: {
+    fontSize : {
+      'title' : "40px",
+      'sub-title': "30px", 
+      'base'  : "20px",
+    },
     colors : {
       'dark-bg' : '#1E293B',
       'dark-text' : '#94A3B8',

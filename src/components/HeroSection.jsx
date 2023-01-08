@@ -1,10 +1,9 @@
 import React from 'react'
-import pf from '../pf.jpg'
-import {AiOutlineArrowDown} from 'react-icons/ai'
+
 
 const HeroSection = () => {
   return (
-   <div className="dark:bg-dark-bg">
+   <div className="dark:bg-dark-bg mt-20">
      <div className='grid grid-cols-12  my-10 justify-between items-center'>
 
 <div className="col-span-6 ">
@@ -12,15 +11,14 @@ const HeroSection = () => {
   <div className="">
     <div className="md:w-[500px] mb-8">
             <p className='dark:text-[#ccc] font-bold tracking-wider text-[15px] mb-3'>Welcome To My World!</p>
-            <p className=' dark:text-white font-bold text-[40px] mb-3'>I'm Yamone Myat Moe, <br /> A Web Developer</p>
+            <p className='  gradient font-bold text-[40px] mb-3'>I'm Yamone Myat Moe, <br />  <span className='text-black dark:text-white'>A Web Developer</span></p>
             <p className=' dark:text-[#eee] font-normal text-[20px] '>My main focus is to bring a standard website  to the user</p>
     
     </div>
 
-    <a className="dark:text-white border-2 dark:hover:text-black font-semibold   p-3 mt-4 flex w-[230px] justify-around items-center rounded-md hover:bg-[#ea8cd3] btn-shadow  duration-150 hover:text-white group">
+    <div className="btn-primary btn-shadow flex group">
      <span>More About Me</span>
-      {/* <span className='bg-pink-600 rounded-full w-[30px] h-[30px] flex items-center font-bold group-hover:bg-white  '><AiOutlineArrowDown className='m-auto text-white group-hover:text-black' /></span> */}
-    </a>
+    </div>
   </div>
 
 </div>

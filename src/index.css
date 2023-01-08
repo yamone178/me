@@ -9,73 +9,85 @@
     .btn-shadow{
         @apply shadow-[inset_5px_5px_5px_rgb(0_0_0_/_5%),_inset_-5px_-5px_5px_rgb(255_255_255_/_50%),_5px_5px_5px_rgb(0_0_0_/_5%),_-5px_-5px_5px_rgb(255_255_255_/_50%)];
     }
+
+    .gradient{
+        @apply  inline-block text-transparent bg-clip-text bg-gradient-to-l from-purple-500 to-pink-500
+    }
+
+    .btn-primary{
+        @apply dark:text-white border-2 dark:hover:text-black hover:bg-[#ea8cd3] hover:text-white font-semibold py-2 mt-4  w-[230px] justify-around items-center rounded-md 
+      
+    }
+    
 }
 
 *{
    font-family:  'Montserrat', sans-serif;
 }
 
-ul a:active{
-    color: purple !important;
-}
-
-.circle{
-    width: 800px;
-    height: 400px;
-   
-    z-index: 1000;
-    border-radius: 50%;
-    filter: blur(90px);
-    right: 0px;
-    background-color: #9024e34f;
-    /* background-color: #c292dea9;  */
-}
-.circle1{
-    position: absolute;
-    top: 100px;
-    left: 200px;
-    /* top: 50px;
-    left: 50px; */
+@layer utilities{
+    ul a:active{
+        color: purple !important;
+    }
     
-
-}
-.circle2{
-    top: 50px;
-    right: 50px;
-    background-color: #e2295d;
-}
-.circle3{
-    position: fixed;
-    bottom: -390px;
-    /* bottom: 50px; */
-    /* right: 30%; */
-    /* background-color: #67B3E4; */
-    /* background-image: linear-gradient(to left top, #c29d2e, #90ae49, #5bb877, #14bca7, #00bbcd, #2db8da, #52b4e2, #72afe5, #7bace5, #84a9e4, #8ca6e2, #95a3e0);    background-color: #c292dea9;  */
-    background-image: linear-gradient(to right top, #d16ba5bc, #d55fae8d, #d753b896, #d748c4a1, #d33cd3, #cc3dda, #c33ee1, #ba40e8, #b049e7, #a650e5, #9c56e3b3, #955be0);
-}
-
-@keyframes morph {
-    0%, 100%{
+    .circle{
+        width: 800px;
+        height: 400px;
+       
+        z-index: 1000;
+        border-radius: 50%;
+        filter: blur(90px);
+        right: 0px;
+        background-color: #9024e34f;
+        /* background-color: #c292dea9;  */
+    }
+    .circle1{
+        position: absolute;
+        top: 100px;
+        left:-100px;
+        /* top: 50px;
+        left: 50px; */
+        
+    
+    }
+    .circle2{
+        top: 50px;
+        right: 50px;
+        background-color: #e2295d;
+    }
+    .circle3{
+        position: fixed;
+        bottom: -390px;
+        /* bottom: 50px; */
+        /* right: 30%; */
+        /* background-color: #67B3E4; */
+        /* background-image: linear-gradient(to left top, #c29d2e, #90ae49, #5bb877, #14bca7, #00bbcd, #2db8da, #52b4e2, #72afe5, #7bace5, #84a9e4, #8ca6e2, #95a3e0);    background-color: #c292dea9;  */
+        background-image: linear-gradient(to right top, #d16ba5bc, #d55fae8d, #d753b896, #d748c4a1, #d33cd3, #cc3dda, #c33ee1, #ba40e8, #b049e7, #a650e5, #9c56e3b3, #955be0);
+    }
+    
+    @keyframes morph {
+        0%, 100%{
+            border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+        }
+        33%{
+            border-radius: 72% 28% 48% 48%/ 28% 28% 72% 72%
+        }
+        66%{
+            border-radius: 100% 56% 56% 100% / 100% 100% 56% 56%;
+        }
+    }
+    
+    .blob{
+        overflow: hidden;
+        width: 450px;
+        height: 450px;
         border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+        animation: morph 3.75s linear infinite;
     }
-    33%{
-        border-radius: 72% 28% 48% 48%/ 28% 28% 72% 72%
+    
+    .bg-img{
+        background: #8f44fd url("./pf5.jpg");
+        background-size: cover;
+        background-position: center;
     }
-    66%{
-        border-radius: 100% 56% 56% 100% / 100% 100% 56% 56%;
-    }
-}
-
-.blob{
-    overflow: hidden;
-    width: 450px;
-    height: 450px;
-    border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
-    animation: morph 3.75s linear infinite;
-}
-
-.bg-img{
-    background: #8f44fd url("./pf.jpg");
-    background-size: cover;
-    background-position: center;
 }

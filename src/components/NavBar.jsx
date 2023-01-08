@@ -1,7 +1,6 @@
 import React from 'react'
 import { Navbar } from 'flowbite-react'
 import { Avatar } from 'flowbite-react'
-import { Button } from 'flowbite-react'
 import { HiSun } from "react-icons/hi";
 import { HiOutlineMoon } from "react-icons/hi";
 
@@ -9,8 +8,9 @@ import { HiOutlineMoon } from "react-icons/hi";
 const NavBar = ({changeDark, dark, iconColor}) => {
   return (
     
+<div className=" w-[100%] fixed z-[1000]  backdrop-blur-3xl bg-opacity-50 bg-white dark:bg-dark-bg ">
 <Navbar
-  className={dark}
+  className={`${dark} h-[65px] !bg-transparent  text-[16px] w-[80%] mx-auto  px-3  `}
   fluid={true}
   rounded={true}
 >
@@ -21,8 +21,8 @@ const NavBar = ({changeDark, dark, iconColor}) => {
       bordered={true}
       color="purple"
     />
-    <span className=" ml-5 self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-     Yamone
+    <span className=" ml-5 self-center whitespace-nowrap text-xl font-semibold text-white">
+    
     </span>
   </Navbar.Brand>
   <div className="flex md:order-2">
@@ -36,26 +36,34 @@ const NavBar = ({changeDark, dark, iconColor}) => {
   </div>
   <Navbar.Collapse>
     <Navbar.Link
-      href="/navbars"
+className=" "   href="/navbars"
       active={true}
-      className='!text-primary-dark'
     >
       Home
     </Navbar.Link>
-    <Navbar.Link href="/navbars">
+    <Navbar.Link
+    className=""
+    href="/navbars">
       About
     </Navbar.Link>
-    <Navbar.Link href="/navbars">
+    <Navbar.Link
+    className=""
+    href="/navbars">
       Skills
     </Navbar.Link>
-    <Navbar.Link href="/navbars">
+    <Navbar.Link
+    className=""
+    href="/navbars">
       Portfolio
     </Navbar.Link>
-    <Navbar.Link href="/navbars">
+    <Navbar.Link
+    className=""
+    href="/navbars">
       Contact
     </Navbar.Link>
   </Navbar.Collapse>
 </Navbar>
+</div>
 
   )
 }
