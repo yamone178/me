@@ -3,6 +3,7 @@ import HeroSection from './components/HeroSection'
 import NavBar from './components/NavBar'
 import { useState, useEffect } from 'react'
 import AboutMe from './components/AboutMe'
+import Skills from './components/Skills'
 
 const App = () => {
 
@@ -51,6 +52,8 @@ const App = () => {
         <HeroSection />
 
         <AboutMe />
+
+        <Skills />
 
         <div className="h-screen"></div>
       </div>

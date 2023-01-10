@@ -1,5 +1,4 @@
 import React from 'react'
-import pf2 from '../pf4.jpg'
 import {BsDashLg} from "react-icons/bs"
 
 const AboutMe = () => {

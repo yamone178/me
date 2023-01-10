@@ -18,6 +18,11 @@
         @apply dark:text-white border-2 dark:hover:text-black hover:bg-[#ea8cd3] hover:text-white font-semibold py-2 mt-4  w-[230px] justify-around items-center rounded-md 
       
     }
+    .bg-gradient{
+        @apply bg-gradient-to-l from-purple-500 to-pink-500
+    }
+   
+   
     
 }
 
@@ -89,5 +94,34 @@
         background: #8f44fd url("./pf5.jpg");
         background-size: cover;
         background-position: center;
+    }
+
+    .outer{
+        box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                    -6px -6px 10px -1px rgba(2551, 255, 255, 0.7);
+    }
+
+    .inner{
+        box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                    inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                    -0.5px -0.5px 0px rgba(255,255,255,0.7),
+                    0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+                    0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    }
+
+
+
+    circle{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 20px;
+        stroke-dasharray: 200;
+        stroke-dashoffset: 200;
+
+    }
+   .skills svg{
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 }
