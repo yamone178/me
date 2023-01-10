@@ -49,7 +49,7 @@ const AboutMe = () => {
                 {
                   infos.map((info, index) =>{
                    return (
-                      <li className='flex  items-center dark:text-white'>
+                      <li key={index} className='flex  items-center dark:text-white'>
                       <p className="w-[150px]">{info}</p>
                       <div className={`btn-primary btn-shadow flex group ${info === "Email" || info === "Github" ? "!w-auto px-3": ""}`} >
                         <span>{values[index]}</span>
