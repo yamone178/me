@@ -5,11 +5,15 @@ const Skills = () => {
 
   const skills = [
     {
-      "HTML" : 424,
-      "Css" : 200, 
-      "Javascript": 200,
-      "PHP" : 200,
-      "React": 200,
+      "HTML" : 350,
+      "Css" : 300, 
+      "Javascript": 260,
+      "React": 220,
+      "PHP" : 280,
+      "Laravel": 300,
+      "Tailwind" : 280,
+      "Bootstrap": 300
+
       
     }
   ]
@@ -24,14 +28,19 @@ const Skills = () => {
             <div className="w-[50px] h-[3px] bg-gradient"></div>
         </div>
 
-        <div className="flex justify-between mt-16">
+        <div className="grid grid-cols-12 my-9 space-y-5">
+
         {
           skills.map((object, index) => {
             return (
              Object.keys(object).map((key,index)=>{
               return (
+
+                <div className="col-span-3 flex justify-center items-center"  key={index}>
+                   <Skill title = {key} value = {object[key]} />
+
+                </div>
                 
-                <Skill key={index} title = {key} value = {object[key]} />
               )
              }) 
             )

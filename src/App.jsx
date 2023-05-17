@@ -4,6 +4,7 @@ import NavBar from './components/NavBar'
 import { useState, useEffect } from 'react'
 import AboutMe from './components/AboutMe'
 import Skills from './components/Skills'
+import Portfolio from './components/Portfolio'
 
 const App = () => {
 
@@ -54,6 +55,8 @@ const App = () => {
         <AboutMe />
 
         <Skills />
+
+        <Portfolio />
 
         <div className="h-screen"></div>
       </div>

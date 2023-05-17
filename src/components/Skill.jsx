@@ -8,7 +8,7 @@ const Skill = ({title, value}) => {
             stroke: "URL(#GradientColor)",
             strokeWidth: '20px',
             strokeDasharray: value,
-            strokeDashoffset: value,
+          
     
         }
     }
