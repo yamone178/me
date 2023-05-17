@@ -95,6 +95,12 @@
         background-size: cover;
         background-position: center;
     }
+    .bg-img:hover {
+        background:  url("./pf2.jpg");
+        background-size: contain;
+        background-position: center;
+        transition: 0.9s;
+    }
 
     .outer{
         box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
