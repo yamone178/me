@@ -6,6 +6,13 @@ module.exports = {
     'node_modules/flowbite-react/**/*.{js,jsx}' 
    ],
   theme: {
+    screens:{
+      "sm": '480px',
+     "md": '768px',
+      "lg": '976px',
+      "xl": '1366px',
+      '2xl': '1920px'
+    },
     fontSize : {
       'title' : "40px",
       'sub-title': "30px", 
@@ -23,6 +30,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('flowbite/plugin')
+    require('flowbite/plugin'),
+    require('tailwind-scrollbar-hide')
   ],
 }

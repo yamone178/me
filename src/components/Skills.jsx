@@ -1,5 +1,6 @@
 import React from 'react'
 import Skill from './Skill'
+import {motion as m} from 'framer-motion'
 
 const Skills = () => {
 
@@ -19,7 +20,11 @@ const Skills = () => {
   ]
 
   return (
-    <div className='mt-20'>
+    <m.div
+    initial={{opacity: 0}}
+   animate={{opacity: 1}}
+   transition={{duration: 2, ease: 'easeOut'}}
+     className=' '>
 
         
 
@@ -28,7 +33,7 @@ const Skills = () => {
             <div className="w-[50px] h-[3px] bg-gradient"></div>
         </div>
 
-        <div className="grid grid-cols-12 my-9 space-y-5">
+        <div className="grid grid-cols-12  space-y-5">
 
         {
           skills.map((object, index) => {
@@ -36,7 +41,7 @@ const Skills = () => {
              Object.keys(object).map((key,index)=>{
               return (
 
-                <div className="col-span-3 flex justify-center items-center"  key={index}>
+                <div className=" col-span-6 lg:col-span-3 flex justify-center items-center"  key={index}>
                    <Skill title = {key} value = {object[key]} />
 
                 </div>
@@ -52,7 +57,7 @@ const Skills = () => {
        
 
         
-    </div>
+    </m.div>
   )
 }
 

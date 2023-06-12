@@ -1,5 +1,7 @@
 import React from 'react'
 import {BsDashLg} from "react-icons/bs"
+import {motion as m} from 'framer-motion'
+
 
 const AboutMe = () => {
 
@@ -15,13 +17,17 @@ const AboutMe = () => {
 
  
   return (
-    <div className='mt-20 relative'>
+    <m.div 
+    initial={{opacity: 0}}
+   animate={{opacity: 1}}
+   transition={{duration: 2, ease: 'easeOut'}}
+    className=' relative ' >
 
-        <div className="grid grid-cols-12">
-            <div className="col-span-6 flex flex-col justify-between ">
-            <h1 className="text-title  dark:text-white font-bold">GET <span className='text-pink-500'>TO </span>KNOW <span className='text-pink-500'>ME!</span></h1>
+        <div className="grid grid-cols-6 lg:grid-cols-12">
+            <div className="col-span-6 flex flex-col justify-between items-center my-7 lg:my-0">
+            <h1 className=" text-[35px] lg:text-title   dark:text-white font-bold">GET <span className='text-pink-500'>TO </span>KNOW <span className='text-pink-500'>ME!</span></h1>
 
-               <div className="w-[400px]">
+               <div className=" w-[350px] lg:w-[500px]">
                 <p className='mt-5 text-justify dark:text-white'>
                         Hello there! My name is <span className='text-pink-500 font-semibold'>"Yamone Myat Moe"</span> but most people call me <span className='text-pink-500 font-semibold'>"Yamone"</span>. I love creating new things with code. I learned Web Development since 2021 and then I started a mini project. The Feeling of work done gave me energy to choose <span className='text-pink-500 font-semibold'>"Web Development"</span> as my career. Check out some of my project in Projects section. <br /> <br/>
                         <span className=''>
@@ -32,13 +38,14 @@ const AboutMe = () => {
                 
                </div>
 
-               <div className="w-[400px]">
+               <div className="w-[500px]">
                 <div className={`btn-primary btn-shadow flex group w-full`} >
                           <span>Download CV </span>
                   </div> 
                </div>
             </div>
-            <div className="col-span-6 ">
+            <div className="col-span-6 flex justify-center">
+              <div className=" w-[350px] lg:w-auto">
               <div className="flex items-center ">
                 <BsDashLg className='text-pink-500 text-[30px] mr-5' />
                 <h3 className='text-sub-title font-semibold dark:text-white'>Personal Infos</h3>
@@ -63,11 +70,14 @@ const AboutMe = () => {
 
                 
               </ul>
+              </div>
+              
             </div>
+            {/* <div className=" h-[140px] w-full col-span-6"></div> */}
 
 
         </div>
-    </div>
+    </m.div>
   )
 }
 

@@ -1,4 +1,6 @@
 import React from 'react'
+import {motion as m} from 'framer-motion'
+
 
 const Skill = ({title, value}) => {
 
@@ -7,9 +9,9 @@ const Skill = ({title, value}) => {
             fill: "none",
             stroke: "URL(#GradientColor)",
             strokeWidth: '20px',
-            strokeDasharray: value,
-          
-    
+            strokeDasharray: 472,
+            
+             
         }
     }
 
@@ -30,7 +32,11 @@ const Skill = ({title, value}) => {
         <stop offset="100%" stop-color="#673ab7" />
      </linearGradient>
   </defs>
-  <circle cx="80" cy="80" r="70" stroke-linecap="round" style={styles.circle}/>
+  <m.circle 
+  initial={{ strokeDashoffset: 472}}
+  animate={{strokeDashoffset: value}}
+  transition={{ease: 'linear', duration: 1.5, }}
+  cx="80" cy="80" r="70" stroke-linecap="round" style={styles.circle}/>
 </svg>
  </div>
   )
