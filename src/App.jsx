@@ -13,7 +13,10 @@ import {RiMessage2Fill} from 'react-icons/ri'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 
+
 const App = () => {
+
+ 
 
   const [dark, setDark] = useState('')
   const [iconColor, setIconColor] = useState('black')
@@ -55,16 +58,13 @@ const App = () => {
     },
     {
       name: <BsFillPersonFill />,
-      path: 'skills'
+      path: '/skills'
     },
     {
       name: <MdWork/>,
-      path: 'portfolio'
+      path: '/portfolio'
     },
-    {
-      name: <RiMessage2Fill />,
-      path: '/contact'
-    }
+   
         
   ]
 
@@ -73,11 +73,12 @@ const App = () => {
 
   return (
    <div className={dark}>
-     <div className="dark:bg-dark-bg relative h-auto lg:h-screen overflow-hidden">
+     <div className="dark:bg-dark-bg relative ">
      <NavBar changeDark={changeDark} dark={dark} />
 
-      <div className='w-[80%] mx-auto pt-3 sticky top-0'>
-          {/* <div className="circle circle1 blob"></div> */}
+      <div className='mx-auto pt-3 sticky top-0 p-[30px] h-auto md:h-screen' >
+         <div className="">
+           {/* <div className="circle circle1 blob"></div> */}
               {/* <div className="circle circle2"></div> */}
               <div className="circle circle3 blob !w-full"></div>
 
@@ -96,13 +97,15 @@ const App = () => {
   
               </div>
         
+         </div>
 
+        <div className="w-full h-[100px] md:hidden"> </div>
         
        
       </div>
 
 
-      <div className="fixed flex w-[290px] h-[60px] bg-gradient items-center  justify-evenly rounded-2xl bottom-5 lg:bottom-5 left-0 right-0 m-auto">
+      <div className="fixed flex w-[290px] xl:w-[500px] h-[60px] xl:h-[80px] bg-gradient items-center  justify-evenly rounded-2xl bottom-5 lg:bottom-5 left-0 right-0 m-auto">
         {
             tabs.map((tab,index)=>{
             return <Tab  tab={tab} key={index} />
@@ -111,8 +114,8 @@ const App = () => {
         
         </div>
 
-        <div className=" hidden md:flex justify-center items-center vertical-text  absolute top-0 h-screen w-[40px] btn-shadow bg-opacity-100 right-0">
-           <p className='gradient font-bold tracking-widest dark:text-white text-[12px]'> copyright@2023, YamoneMyatMoe</p>
+        <div className=" hidden fixed md:flex justify-center items-center vertical-text  top-0 h-[100%] w-[50px] btn-shadow bg-opacity-100 right-0">
+           <p className='gradient font-bold tracking-widest dark:text-white  lg:text-[12px] xl:text-[17px]'> copyright@2023, YamoneMyatMoe</p>
         </div>
      </div>
    </div>

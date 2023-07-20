@@ -14,7 +14,7 @@ const NavBar = ({changeDark, dark, iconColor}) => {
 
 
     
-<div className=" w-[100%] relative z-[1000]  backdrop-blur-3xl bg-opacity-50 bg-white dark:bg-dark-bg ">
+<div className=" w-[100%] relative z-[1000]  backdrop-blur-3xl bg-opacity-50 bg-white dark:bg-dark-bg lg:h-auto xl:h-[100px] xl:p-[20px]">
 <Navbar
   className={`${dark} h-[65px] !bg-transparent  text-[16px] w-[80%] mx-auto  px-3  `}
   fluid={true}

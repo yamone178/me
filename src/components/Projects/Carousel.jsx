@@ -19,20 +19,20 @@ const Carousel = () => {
         {
             title : "Muki Store",
             img: muki,
-            github: "https://github.com/yamone178/space",
-            demo: "https://space-multiple-purpose.netlify.app/"
+            github: "https://github.com/yamone178/Mukistore",
+            demo: "https://muki-shop.netlify.app/"
         },
         {
             title : "Foodie",
             img: foodie,
-            github: "https://github.com/yamone178/space",
-            demo: "https://space-multiple-purpose.netlify.app/"
+            github: "https://github.com/yamone178/foodie",
+            demo: "https://ymm-foodie.netlify.app/"
         },
         {
             title : "QR Code Reader",
             img: qr,
-            github: "https://github.com/yamone178/space",
-            demo: "https://space-multiple-purpose.netlify.app/"
+            github: "https://github.com/yamone178/QR-Code-Reader",
+            demo: "https://qr-cod-reader.netlify.app/"
         },
     ]
     
@@ -49,7 +49,7 @@ const Carousel = () => {
   return (
     <div className='relative h-[80vh]'>
 
-        <div className="flex justify-end">
+        <div className="flex justify-end mb-auto xl:mb-[30px] mt-[50px] mr-[30px] md:mt-auto">
             <div className="">
                 <button onClick={scrollToRight} className=' btn-primary btn-shadow  w-[60px] p-2 m-2'><AiOutlineLeft className='m-auto'/></button>
                 <button onClick={scrollToLeft} className='  btn-primary btn-shadow  w-[60px]'><AiOutlineRight className='m-auto'/></button>

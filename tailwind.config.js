@@ -9,9 +9,8 @@ module.exports = {
     screens:{
       "sm": '480px',
      "md": '768px',
-      "lg": '976px',
-      "xl": '1366px',
-      '2xl': '1920px'
+      "lg": '1366px',
+      'xl': '1920px'
     },
     fontSize : {
       'title' : "40px",
