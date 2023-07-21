@@ -45,10 +45,10 @@ const HeroSection = () => {
 
 
   <div className="flex  flex-col justify-center items-center md:items-start">
-    <div className="md:w-[500px] lg:w-[700px] xl:w-[800px] mr-[20px] mb-8 text-center md:text-start">
+    <div className="md:w-[500px] lg:w-[550px] xl:w-[800px] mr-[20px] mb-8 text-center md:text-start">
             <p className='dark:text-[#ccc] font-bold tracking-wider lg:text-[15px] xl:text-[30px] mb-3'>Welcome To My World!</p>
-            <p className='  gradient font-bold text-[26px] md:text-[40px] lg:text-[45px] xl:text-[60px] mb-3 '>I'm Yamone Myat Moe, <br />  <span className='text-black dark:text-white'>A Web Developer</span></p>
-            <p className=' dark:text-[#eee] font-normal md:text-[20px] xl:text-[33px] '>My main focus is to bring a standard website  to the user</p>
+            <p className='  gradient font-bold text-[26px] md:text-[40px] lg:text-[35px] xl:text-[50px] mb-3 '>I'm Yamone Myat Moe, <br />  <span className='text-black dark:text-white'>A Web Developer</span></p>
+            <p className=' dark:text-[#eee] font-normal md:text-[20px] lg:[20px] xl:text-[33px] '>My main focus is to bring a standard website  to the user</p>
     
     </div>
 
@@ -56,7 +56,7 @@ const HeroSection = () => {
      <span>More About Me</span>
     </div>
 
-    <div className="flex w-[200px] justify-between mt-0 md:mt-[30px]">
+    <div className="flex w-[200px] justify-between mt-0 ">
       {
         socialLinks.map((socialLink, index)=>{
          return  <SocialIcons link={socialLink.link} icon={socialLink.icon} key={index}/>
@@ -82,7 +82,7 @@ const HeroSection = () => {
           <m.div 
           drag
           dragConstraints={constraintRef}
-          className="blob w-[300px] h-[300px] md:w-[350px] md:h-[350px] lg:w-[500px] lg:h-[500px] xl:w-[650px] xl:h-[650px]  mt-[30px] mb-[30px] lg:mt-0 lg:mb-0 bg-img cursor-move"></m.div>
+          className="blob w-[300px] h-[300px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[650px] xl:h-[650px]  mt-[30px] mb-[30px] lg:mt-0 lg:mb-0 bg-img cursor-move"></m.div>
         </m.div>
         
     </div>

@@ -33,7 +33,7 @@
    box-sizing: border-box;
 }
 
-/* width */
+/* width*/
 ::-webkit-scrollbar {
     width: 17px;
   }
@@ -54,7 +54,8 @@
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #5f4080; 
-  }
+  } 
+  
 
 @layer utilities{
     ul a:active{

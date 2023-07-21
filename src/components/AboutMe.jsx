@@ -29,7 +29,7 @@ const AboutMe = () => {
             <h1 className=" text-[35px] lg:text-title xl:text-[60px]  dark:text-white font-bold">GET <span className='text-pink-500'>TO </span>KNOW <span className='text-pink-500'>ME!</span></h1>
 
                <div className=" w-full md:w-[350px] lg:w-[500px] xl:w-[700px]">
-                <p className='mt-5 lg:text-[20px] xl:text-[27px] text-justify dark:text-white'>
+                <p className='mt-5 lg:text-[17px] xl:text-[27px] text-justify dark:text-white'>
                         Hello there! My name is <span className='text-pink-500 font-semibold'>"Yamone Myat Moe"</span> but most people call me <span className='text-pink-500 font-semibold'>"Yamone"</span>. I love creating new things with code. I learned Web Development since 2021 and then I started a mini project. The Feeling of work done gave me energy to choose <span className='text-pink-500 font-semibold'>"Web Development"</span> as my career. Check out some of my project in Projects section. <br /> <br/>
                         <span className=''>
                         Feel free to Connect with me via email or follow me on Linkedin
@@ -59,7 +59,7 @@ const AboutMe = () => {
                    return (
                       <li key={index} className='flex flex-col md:flex-row items-center dark:text-white'>
                       <p className="w-[150px] text-center md:text-left lg:text-[] xl:text-[27px]">{info}</p>
-                      <div className={`btn-primary btn-shadow flex group w-full lg:h-[60px] lg:w-[400px] 
+                      <div className={`btn-primary btn-shadow flex group w-full lg:h-[50px] lg:w-[300px] 
                       
                       `
                     } 
