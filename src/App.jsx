@@ -10,7 +10,7 @@ import {AiTwotoneHome, AiFillSetting} from 'react-icons/ai'
 import {BsFillPersonFill} from 'react-icons/bs'
 import {MdWork} from 'react-icons/md'
 import {RiMessage2Fill} from 'react-icons/ri'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 
 
@@ -72,7 +72,6 @@ const App = () => {
  
 
   return (
-   
    <div className={dark}>
      <div className="dark:bg-dark-bg relative ">
      <NavBar changeDark={changeDark} dark={dark} />
@@ -86,16 +85,15 @@ const App = () => {
               {/* <RouterProvider router={router}/> */}
 
               <div className="">
-             
+              <BrowserRouter>
                 <Routes>
-                  <Route index element={<App />} />
-                  <Route path='/' element={<HeroSection />} />
-                  <Route exact path="/home" element={<HeroSection/>} />
-                  <Route exact path="/about" element={<AboutMe />} />
-                  <Route exact path="/skills" element={<Skills />} />
-                  <Route exact path="/portfolio" element={<Portfolio />} />
+                  <Route index element={<HeroSection/>} />
+                  <Route path="/home" element={<HeroSection/>} />
+                  <Route path="/about" element={<AboutMe />} />
+                  <Route path="/skills" element={<Skills />} />
+                  <Route path="/portfolio" element={<Portfolio />} />
                 </Routes>
-              
+              </BrowserRouter>
   
               </div>
         
@@ -121,7 +119,6 @@ const App = () => {
         </div>
      </div>
    </div>
-  
   )
 }
 
