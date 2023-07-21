@@ -53,7 +53,7 @@
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #1e293b00; 
+    background: #5f4080; 
   }
 
 @layer utilities{

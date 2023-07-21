@@ -87,7 +87,7 @@ const App = () => {
               <div className="">
              
                 <Routes>
-                 
+                <Route path='/' element={<HeroSection/>} />
                   <Route path="/home" element={<HeroSection/>} />
                   <Route path="/about" element={<AboutMe />} />
                   <Route path="/skills" element={<Skills />} />

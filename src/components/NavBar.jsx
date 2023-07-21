@@ -33,7 +33,7 @@ const NavBar = ({changeDark, dark, iconColor}) => {
         </button>
     
    
-    <Navbar.Toggle />
+   
   </div>
   
 </Navbar>
