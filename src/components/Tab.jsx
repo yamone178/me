@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 const Tab = ({tab}) => {
 
   return (
-    <NavLink to={tab.path} className='text-[25px] text-white'>
+    <NavLink to={tab.path} className='text-[25px] text-white' key={tab}>
         {tab.name}
     </NavLink>
   )
