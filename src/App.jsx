@@ -10,7 +10,7 @@ import {AiTwotoneHome, AiFillSetting} from 'react-icons/ai'
 import {BsFillPersonFill} from 'react-icons/bs'
 import {MdWork} from 'react-icons/md'
 import {RiMessage2Fill} from 'react-icons/ri'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import {  Route, Routes } from 'react-router-dom'
 
 
 
@@ -85,15 +85,15 @@ const App = () => {
               {/* <RouterProvider router={router}/> */}
 
               <div className="">
-              <BrowserRouter>
+             
                 <Routes>
-                  <Route index element={<HeroSection/>} />
+                 
                   <Route path="/home" element={<HeroSection/>} />
                   <Route path="/about" element={<AboutMe />} />
                   <Route path="/skills" element={<Skills />} />
                   <Route path="/portfolio" element={<Portfolio />} />
                 </Routes>
-              </BrowserRouter>
+            
   
               </div>
         

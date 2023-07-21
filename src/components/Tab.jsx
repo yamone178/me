@@ -1,12 +1,12 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Tab = ({tab}) => {
 
   return (
-    <NavLink to={tab.path} className='text-[25px] text-white'>
+    <Link  to={tab.path} className='text-[25px] text-white'>
         {tab.name}
-    </NavLink>
+    </Link>
   )
 }
 

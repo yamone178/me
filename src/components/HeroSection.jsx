@@ -44,10 +44,10 @@ const HeroSection = () => {
   <div className="col-span-6  flex justify-center sm:order-last order-1">
 
 
-  <div className=" ">
-    <div className="md:w-[500px] lg:w-[700px] xl:w-[800px] mr-[20px] mb-8">
+  <div className="flex flex-col justify-center items-center">
+    <div className="md:w-[500px] lg:w-[700px] xl:w-[800px] mr-[20px] mb-8 text-center">
             <p className='dark:text-[#ccc] font-bold tracking-wider lg:text-[15px] xl:text-[30px] mb-3'>Welcome To My World!</p>
-            <p className='  gradient font-bold md:text-[40px] lg:text-[45px] xl:text-[60px] mb-3 '>I'm Yamone Myat Moe, <br />  <span className='text-black dark:text-white'>A Web Developer</span></p>
+            <p className='  gradient font-bold text-[26px] md:text-[40px] lg:text-[45px] xl:text-[60px] mb-3 '>I'm Yamone Myat Moe, <br />  <span className='text-black dark:text-white'>A Web Developer</span></p>
             <p className=' dark:text-[#eee] font-normal md:text-[20px] xl:text-[33px] '>My main focus is to bring a standard website  to the user</p>
     
     </div>
@@ -56,12 +56,14 @@ const HeroSection = () => {
      <span>More About Me</span>
     </div>
 
-    <div className="flex w-[200px] justify-between mt-[30px]">
-    {
-        socialLinks.map((index,socialLink)=>{
-         return  <SocialIcons link={socialLink.link} icon={socialLink.icon} key={socialLink.icon}/>
+    <div className="flex w-[200px] justify-between mt-0 md:mt-[30px]">
+      {
+        socialLinks.map((socialLink)=>{
+         return  <SocialIcons link={socialLink.link} icon={socialLink.icon}/>
         })
       }
+    
+
     </div>
 
   

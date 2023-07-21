@@ -33,6 +33,29 @@
    box-sizing: border-box;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 17px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to right top, #051937, #2e2d5d, #5f4080, #984f9d, #d65db1);
+    border-radius: 10px;
+    
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1e293b00; 
+  }
+
 @layer utilities{
     ul a:active{
         color: purple !important;
