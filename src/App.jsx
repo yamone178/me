@@ -6,11 +6,11 @@ import AboutMe from './components/AboutMe'
 import Skills from './components/Skills'
 import Portfolio from './components/Portfolio'
 import Tab from './components/Tab'
-import {AiTwotoneHome, AiFillSetting} from 'react-icons/ai'
+import { AiFillSetting} from 'react-icons/ai'
+import { IoHomeSharp } from "react-icons/io5";
 import {BsFillPersonFill} from 'react-icons/bs'
 import {MdWork} from 'react-icons/md'
-import {RiMessage2Fill} from 'react-icons/ri'
-import {  Route, Routes } from 'react-router-dom'
+import {  Route, Routes, useLocation } from 'react-router-dom'
 
 
 
@@ -20,6 +20,10 @@ const App = () => {
 
   const [dark, setDark] = useState('')
   const [iconColor, setIconColor] = useState('black')
+
+ const location = useLocation();
+  
+  const [path, setPath] = useState('')
 
 
   useEffect(()=>{
@@ -47,17 +51,24 @@ const App = () => {
       }
   }
 
+  // const checkPath = (path) =>{
+  //   if (currentPath === path) {
+  //     setPath(path)
+  //   }
+  //    setPath('/home')
+  // }
+
   const tabs= [
     {
-      name: <AiTwotoneHome /> ,
+      name: <IoHomeSharp /> ,
       path: '/home'
     },
     {
-      name: <AiFillSetting />,
+      name: <BsFillPersonFill />,
       path: '/about'
     },
     {
-      name: <BsFillPersonFill />,
+      name: <AiFillSetting />,
       path: '/skills'
     },
     {
@@ -73,7 +84,7 @@ const App = () => {
 
   return (
    <div className={dark}>
-     <div className="dark:bg-dark-bg relative ">
+     <div className="relative dark:bg-dark-bg ">
      <NavBar changeDark={changeDark} dark={dark} />
 
       <div className='mx-auto pt-3 sticky top-0 p-[30px] h-auto md:h-screen' >
@@ -108,14 +119,23 @@ const App = () => {
       <div className="fixed flex w-[290px] xl:w-[500px] h-[60px] xl:h-[80px] bg-gradient items-center  justify-evenly rounded-2xl bottom-5 lg:bottom-5 left-0 right-0 m-auto">
         {
             tabs.map((tab,index)=>{
-            return <Tab  tab={tab} key={index} />
+            return <Tab 
+             className={`${
+              location.pathname === tab.path ? 'text-white font-bold' : 'text-pink-300  border-white '
+            }`}
+             tab={tab} key={index} />
             })
         }
+        {/* <Tab className={`${currentPath === "/home"? 'text-white': 'text-black'}`}  tab={<IoHomeSharp />} to="/home" />
+        <Tab className={`${currentPath === "/about" ? 'text-white': 'text-black'}`}  tab={<BsFillPersonFill />} to="/about" />
+        <Tab className={`${currentPath === "/skills" ? 'text-white': 'text-black'}`}  tab={<AiFillSetting />} to="/skills" />
+        <Tab className={`${currentPath === "/portfolio" ? 'text-white': 'text-black'}`}  tab={<MdWork/>} to="/portfolio" /> */}
+
         
         </div>
 
         <div className=" hidden fixed md:flex justify-center items-center vertical-text  top-0 h-[100%] w-[50px] btn-shadow bg-opacity-100 right-0">
-           <p className='gradient font-bold tracking-widest dark:text-white  lg:text-[12px] xl:text-[17px]'> copyright@2023, YamoneMyatMoe</p>
+           <p className='gradient font-bold tracking-widest dark:text-white  lg:text-[12px] xl:text-[17px]'> copyright@2024, YamoneMyatMoe</p>
         </div>
      </div>
    </div>

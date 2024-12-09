@@ -1,10 +1,11 @@
 import React from 'react'
 import {BsDashLg} from "react-icons/bs"
 import {motion as m} from 'framer-motion'
-import yamone from '../yamone.pdf'
 
 
 const AboutMe = () => {
+
+  const yamone ="https://drive.google.com/file/d/1OskAILm81uyxurJ2Vv0sXac9Yt277rLC/view?usp=sharing"
 
   const infos = ["Name","Age","Phone","Address", "Email","Github"]
   const values = [
@@ -30,7 +31,7 @@ const AboutMe = () => {
 
                <div className=" w-full md:w-[350px] lg:w-[500px] xl:w-[700px]">
                 <p className='mt-5 lg:text-[17px] xl:text-[27px] text-justify dark:text-white'>
-                        Hello there! My name is <span className='font-semibold text-pink-500'>"Yamone Myat Moe"</span> but most people call me <span className='font-semibold text-pink-500'>"Yamone"</span>. I love creating new things with code. I learned Web Development since 2021 and then I started a mini project. The Feeling of work done gave me energy to choose <span className='font-semibold text-pink-500'>"Web Development"</span> as my career. Check out some of my project in Projects section. <br /> <br/>
+                        Hello there! My name is <span className='font-semibold text-pink-500'>"Yamone Myat Moe"</span> but most people call me <span className='font-semibold text-pink-500'>"Yamone"</span>. I'm passionate about turning ideas into reality through code. The satisfaction of completing a project gave me energy to choose <span className='font-semibold text-pink-500'>"Web Development"</span> as my career. Check out some of my project in Projects section. <br /> <br/>
                         <span className=''>
                         Feel free to Connect with me via email or follow me on Linkedin
                         </span>
@@ -40,8 +41,11 @@ const AboutMe = () => {
                </div>
 
                <div className=" w-full lg:w-[500px] xl:w-[700px]">
-                <a href={yamone} className={`btn-primary btn-shadow flex group w-full lg:h-auto xl:h-[60px] mt-[40px]`} download>
-                          <span>Download CV </span>
+                <a
+                 href={yamone} className={`btn-primary btn-shadow flex group w-full lg:h-auto xl:h-[60px] mt-[40px]`} 
+                 target='_blank'
+                 rel="noopener noreferrer">
+                          <span>View My CV </span>
                   </a> 
                </div>
             </div>
