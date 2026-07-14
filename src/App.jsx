@@ -25,9 +25,6 @@ const App = () => {
 
  const location = useLocation();
   
-  const [path, setPath] = useState('')
-
-
   useEffect(()=>{
       if(localStorage.theme === ''){
           setDark('')
@@ -52,13 +49,6 @@ const App = () => {
           localStorage.theme = ''
       }
   }
-
-  // const checkPath = (path) =>{
-  //   if (currentPath === path) {
-  //     setPath(path)
-  //   }
-  //    setPath('/home')
-  // }
 
   const tabs= [
     {

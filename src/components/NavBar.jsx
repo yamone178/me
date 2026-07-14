@@ -1,13 +1,12 @@
 import React from 'react'
 import { Navbar } from 'flowbite-react'
-import { Avatar } from 'flowbite-react'
 import { HiSun } from "react-icons/hi";
 import { HiOutlineMoon } from "react-icons/hi";
 
 
 
 
-const NavBar = ({changeDark, dark, iconColor}) => {
+const NavBar = ({changeDark, dark}) => {
 
 
   return (

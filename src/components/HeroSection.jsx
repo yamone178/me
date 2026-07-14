@@ -2,7 +2,6 @@ import React, { useRef } from 'react'
 import {motion as m} from 'framer-motion'
 import SocialIcons from './SocialIcons'
 import { FaFacebookF } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
 import { FaGithub} from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 
