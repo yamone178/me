@@ -15,9 +15,12 @@ const Card = (props) => {
                 <div className="absolute w-full h-[100%] lg:top-[300px] xl:top-[350px] bg-gradient  opacity-60  group-hover:top-0">
 
                   <div className=" flex  gap-2 items-center justify-center h-[200px] lg:h-[250px] xl:h-[350px] space-x-3 ">
-                    <div className="cursor-pointer w-[50px] h-[50px] bg-gray-50 flex justify-center items-center rounded-2xl">
-                     <a href={props.github} target='_blank'><VscGithub  className='text-[25px]'/></a>
-                    </div>
+                    {
+                      props.github &&
+                      <div className="cursor-pointer w-[50px] h-[50px] bg-gray-50 flex justify-center items-center rounded-2xl">
+                        <a href={props.github} target='_blank' rel='noreferrer'><VscGithub  className='text-[25px]'/></a>
+                      </div>
+                    }
 
                     {
                       props.demo === "" ?
@@ -26,7 +29,7 @@ const Card = (props) => {
                         </div>
                       :
                       <div className=" cursor-pointer w-[50px] h-[50px] bg-gray-50 flex justify-center items-center rounded-2xl">
-                      <a href={props.demo} target='_blank'><IoEyeOutline  className='text-[25px]'/></a>
+                      <a href={props.demo} target='_blank' rel='noreferrer'><IoEyeOutline  className='text-[25px]'/></a>
                     </div>
                     }
                    

@@ -5,11 +5,13 @@ import { useState, useEffect } from 'react'
 import AboutMe from './components/AboutMe'
 import Skills from './components/Skills'
 import Portfolio from './components/Portfolio'
+import Work from './components/Work'
 import Tab from './components/Tab'
+import CopyRightBar from './components/CopyRightBar'
 import { AiFillSetting} from 'react-icons/ai'
 import { IoHomeSharp } from "react-icons/io5";
 import {BsFillPersonFill} from 'react-icons/bs'
-import {MdWork} from 'react-icons/md'
+import { MdOutlineFolderSpecial, MdWorkOutline } from 'react-icons/md'
 import {  Route, Routes, useLocation } from 'react-router-dom'
 
 
@@ -72,8 +74,12 @@ const App = () => {
       path: '/skills'
     },
     {
-      name: <MdWork/>,
+      name: <MdOutlineFolderSpecial />,
       path: '/portfolio'
+    },
+    {
+      name: <MdWorkOutline />,
+      path: '/work'
     },
    
         
@@ -103,6 +109,7 @@ const App = () => {
                   <Route path="/about" element={<AboutMe />} />
                   <Route path="/skills" element={<Skills />} />
                   <Route path="/portfolio" element={<Portfolio />} />
+                  <Route path="/work" element={<Work />} />
                 </Routes>
             
   
@@ -135,7 +142,7 @@ const App = () => {
         </div>
 
         <div className=" hidden fixed md:flex justify-center items-center vertical-text  top-0 h-[100%] w-[50px] btn-shadow bg-opacity-100 right-0">
-           <p className='gradient font-bold tracking-widest dark:text-white  lg:text-[12px] xl:text-[17px]'> copyright@2024, YamoneMyatMoe</p>
+        <CopyRightBar />
         </div>
      </div>
    </div>

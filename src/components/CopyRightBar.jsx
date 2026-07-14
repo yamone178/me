@@ -1,8 +1,8 @@
-import React from 'react'
-
 const CopyRightBar = () => {
   return (
-    <div>CopyRightBar</div>
+    <p className="gradient font-bold tracking-widest dark:text-white lg:text-[12px] xl:text-[17px]">
+      © {new Date().getFullYear()} Yamone Myat Moe. All rights reserved.
+    </p>
   )
 }
 

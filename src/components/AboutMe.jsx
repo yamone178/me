@@ -5,12 +5,10 @@ import {motion as m} from 'framer-motion'
 
 const AboutMe = () => {
 
-  const yamone ="https://drive.google.com/file/d/1OskAILm81uyxurJ2Vv0sXac9Yt277rLC/view?usp=sharing"
-
   const infos = ["Name","Age","Phone","Address", "Email","Github"]
   const values = [
     "Yamone Myat Moe", 
-    "22",
+    "24",
     "09751035338",
     "Yangon",
     "yamonemyatmoe1592@gmail.com",
@@ -38,15 +36,6 @@ const AboutMe = () => {
                  </p>
 
                 
-               </div>
-
-               <div className=" w-full lg:w-[500px] xl:w-[700px]">
-                <a
-                 href={yamone} className={`btn-primary btn-shadow flex group w-full lg:h-auto xl:h-[60px] mt-[40px]`} 
-                 target='_blank'
-                 rel="noopener noreferrer">
-                          <span>View My CV </span>
-                  </a> 
                </div>
             </div>
             <div className="flex justify-center col-span-6">

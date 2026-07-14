@@ -10,6 +10,8 @@ import vocal from '../../vocal.png'
 import social from '../../social media.png'
 import zodiac from '../../zodiac channel.png'
 import retail from '../../retail-campaign.png'
+import vocabNote from '../../vocab-note.png'
+import vocabNoteExtension from '../../vocab-note-extension.png'
 
 
 
@@ -18,7 +20,7 @@ import retail from '../../retail-campaign.png'
 
 const Carousel = () => {
 
-    const [Frontend, setFrontend] = useState(true);
+    const [activeTab, setActiveTab] = useState('all');
     
     const projects = [
         {
@@ -55,6 +57,18 @@ const Carousel = () => {
 
     const backendProjects = [
         {
+            title : "Vocabulary Notetaking and Learning System",
+            img: vocabNote,
+            github: "https://github.com/yamone178/Vocab-Note-New",
+            demo: "https://vocab-note.netlify.app/"
+        },
+        {
+            title : "Vocabulary Notetaking Chrome Extension",
+            img: vocabNoteExtension,
+            github: "",
+            demo: "https://chromewebstore.google.com/detail/VocabNote%20Quick%20Save/oocgnffdcpahohpgkfkdioleeadhnnml?utm_source=item-share-cb"
+        },
+        {
             title : "Vocabulary note",
             img: vocal,
             github: "https://github.com/sanneiphyo/vocab_note_react",
@@ -78,6 +92,37 @@ const Carousel = () => {
         },
        
     ]
+
+    const prioritizedAllProjects = [
+        'Vocabulary Notetaking and Learning System',
+        'Vocabulary Notetaking Chrome Extension'
+    ];
+
+    const allProjects = [...projects, ...backendProjects].slice().sort((firstProject, secondProject) => {
+        const firstPriority = prioritizedAllProjects.indexOf(firstProject.title);
+        const secondPriority = prioritizedAllProjects.indexOf(secondProject.title);
+
+        if (firstPriority !== -1 || secondPriority !== -1) {
+            if (firstPriority === -1) {
+                return 1;
+            }
+
+            if (secondPriority === -1) {
+                return -1;
+            }
+
+            return firstPriority - secondPriority;
+        }
+
+        return [...projects, ...backendProjects].indexOf(secondProject) - [...projects, ...backendProjects].indexOf(firstProject);
+    });
+
+    const displayedProjects =
+        activeTab === 'frontend'
+            ? projects
+            : activeTab === 'fullstack'
+                ? backendProjects
+                : allProjects;
     
     function scrollToRight() {
         console.log('right');
@@ -97,10 +142,13 @@ const Carousel = () => {
         <div className="flex justify-between mb-auto xl:mb-[30px] mt-[50px] mr-[30px] md:mt-auto">
              <div className="">
               
-                <button onClick={()=>setFrontend(true)} className={` ${Frontend === true ? '!bg-[#ea8cd3] !text-white btn-primary': 'btn-primary'}  btn-shadow w-[100px]`}>
+                <button onClick={() => setActiveTab('all')} className={` ${activeTab === 'all' ? '!bg-[#ea8cd3] !text-white btn-primary' : 'btn-primary'} btn-shadow w-[100px]`}>
+                   All
+                    </button>
+                <button onClick={() => setActiveTab('frontend')} className={` ${activeTab === 'frontend' ? '!bg-[#ea8cd3] !text-white btn-primary' : 'btn-primary'} btn-shadow w-[100px] ml-4`}>
                    Frontend
                     </button>
-                <button onClick={()=>setFrontend(false)} className={` ${Frontend === false ? '!bg-[#ea8cd3] !text-white btn-primary': 'btn-primary'}  btn-shadow w-[100px] ml-4`}>
+                <button onClick={() => setActiveTab('fullstack')} className={` ${activeTab === 'fullstack' ? '!bg-[#ea8cd3] !text-white btn-primary' : 'btn-primary'} btn-shadow w-[100px] ml-4`}>
                     Full Stack
                 </button>
                 
@@ -112,22 +160,9 @@ const Carousel = () => {
         </div>
         <div id='content' className='relative flex items-center justify-start p-4 overflow-x-auto mt-30 scroll-smooth scrollbar-hide'> 
             {
-                Frontend ? projects.map((pj,index) =>{
-                    return <div>
+                displayedProjects.map((pj,index) =>{
+                    return <div key={`${pj.title}-${index}`}>
                                 <Card 
-                                 key={index}
-                                 title={pj.title}
-                                 img= {pj.img}
-                                 github= {pj.github}
-                                 demo= {pj.demo}
-                                 />
-                            </div>
-                }) :
-
-                 backendProjects.map((pj,index) =>{
-                    return <div>
-                                <Card 
-                                 key={index}
                                  title={pj.title}
                                  img= {pj.img}
                                  github= {pj.github}
@@ -136,8 +171,6 @@ const Carousel = () => {
                                  />
                             </div>
                 })
-
-               
 
               
             }

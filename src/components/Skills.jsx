@@ -13,7 +13,8 @@ const Skills = () => {
       "PHP" : 280,
       "Laravel": 300,
       "Tailwind" : 280,
-      "Bootstrap": 300
+      "Bootstrap": 300,
+      "Next.js": 240
 
       
     }
